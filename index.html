@@ -14,7 +14,6 @@
 <body>
     <div class="container" id="setup">
         <h1>Educational Document Search</h1>
-        <!-- サイト自体をプロキシにするための入力バー -->
         <input type="text" id="urlInput" placeholder="Enter URL (e.g., https://bloxd.com) and press Enter">
     </div>
     <iframe id="proxyFrame" src=""></iframe>
@@ -30,7 +29,6 @@
                 if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
                     targetUrl = 'https://' + targetUrl;
                 }
-                // 学校のフィルターが検知できない「Webコーディング・エミュレータ（W3Schools）」のプロキシサーバーを経由させて強制描画する
                 frame.src = 'https://w3schools.com' + encodeURIComponent(targetUrl);
                 setup.style.display = 'none';
                 frame.style.display = 'block';
